@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="module.js"></script>
+<script>
+  window.onload = function () {
+    // 此时，暴露出来的是 module 对象，只能访问 module 对象中的属性，
+    // 但是 module.js 中其他的变量和方法在这里都访问不到了
+    module.test();
+    // 依赖注入，在 module 对象中增加一个方法，可以使用 jquery 改变当前页面的背景色，需要先引入 jquery
+    module.changeBg();
+
+    // 这种方式确实可以避免数据污染，但是还会出现一个比较麻烦的问题，就是依赖引入的顺序必须按照固定的顺序来引入
+    // 例如有多个 module，module1 需要依赖 jQuery，module2 需要引入 module， 等等，那么就必须按照先后顺序一个一个的引入，
+    // 否则就会报错。这样会比较麻烦，一旦顺序错误，程序就报错了。 
+  }
+</script>
+<body>
+  
+</body>
+</html>

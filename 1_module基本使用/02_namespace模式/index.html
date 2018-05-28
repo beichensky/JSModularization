@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script src="module.js"></script>
+<script>
+  // 此时module.js中的对象obj暴露出来，我们可以拿到并使用
+  obj.test();
+  // 但是此时obj中的数据还是可以被访问到，会造成数据污染
+  // eg:
+  obj.test = function () {
+    console.log('被修改之后的方法执行 ： msg = ' + this.msg);
+  }
+  obj.msg = 'index';
+  obj.test();
+</script>
+<body>
+  
+</body>
+</html>

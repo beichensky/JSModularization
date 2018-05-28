@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script src="module.js"></script>
+<script>
+  // 可能会出现的问题：现在不清楚或者忘记了 module.js 中已经声明了msg变量,
+  // 那么在这里进行msg 的赋值，就会改变 module.js 中的msg变量，污染数据。
+  msg = 'index';
+  test();
+</script>
+<body>
+  
+</body>
+</html>
