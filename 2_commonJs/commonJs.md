@@ -23,4 +23,4 @@
   3.  将 app.js 文件进行编译，转化成浏览器的文件，命令：browerify app.js -o dist/build.js
   4.  创建 index.html 文件，引入编译生成的 build.js 文件，即可在浏览器中查看运行效果。
   
-  > **注意：** 在第3不中使用 browerify app.js -o dist/build.js 命令生成编译文件时，**必须要实现建立好dist 文件**，否则会报错。因为 browerify 并不会自动创建文件夹，只会自动创建文件。所以 **要事先创建好需要放置编译文件的文件夹**。
+  > **注意：** 在第3步中使用 browerify app.js -o dist/build.js 命令生成编译文件时，**不需要事先建立好dist 文件**。因为 browerify 会自动创建文件夹，只会自动创建文件。
